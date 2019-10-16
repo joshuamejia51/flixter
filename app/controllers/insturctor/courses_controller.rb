@@ -2,7 +2,7 @@ class Insturctor::CoursesController < ApplicationController
   before_action :authenticate_user!
 
   def new
-    @courses = course.new
+    @course = Course.new
   end
 
   def create
