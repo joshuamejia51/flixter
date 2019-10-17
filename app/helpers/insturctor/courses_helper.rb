@@ -1,2 +1,0 @@
-module Insturctor::CoursesHelper
-end

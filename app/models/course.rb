@@ -1,5 +1,5 @@
 class Course < ApplicationRecord
-  belings_to :user
+  belongs_to :user
 
   validates :title, presence: true 
   validates :description, presence:true

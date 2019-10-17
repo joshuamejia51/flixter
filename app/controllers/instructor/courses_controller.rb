@@ -1,4 +1,4 @@
-class Insturctor::CoursesController < ApplicationController
+class Instructor::CoursesController < ApplicationController
   before_action :authenticate_user!
 
   def new
@@ -12,16 +12,16 @@ class Insturctor::CoursesController < ApplicationController
     else
       render :new, status: :unprocessable_entity
     end
-end
+  end
 
   def show 
     @course = Course.find(params[:id])
   end
 
-private
+  private
 
-def course_params
-  params.require(:course).permit(:title, :description, :cost)
-end
+  def course_params
+    params.require(:course).permit(:title, :description, :cost)
+  end
 
 end 
